@@ -43,7 +43,7 @@ GET /games
 ```
 POST /sessions
 {
-  "game_id": "遊びたい地雷原のid"
+  "game_id": "遊びたいゲームのid"
 }
 ```
 
@@ -52,8 +52,8 @@ POST /sessions
 ```
 {
   "session_id": {unique_session_id},
-  "num_digits": {桁数},
-  "radix": {基数},
+  "num_digits": 桁数,
+  "radix": 基数,
   "status": {
     "code": 0,
     "text" "in progress"
@@ -84,8 +84,8 @@ PUT /sessions/:session_id/guess
 ```
 {
   "session_id": {unique_session_id},
-  "num_digits": {桁数},
-  "radix": {基数},
+  "num_digits": 桁数,
+  "radix": 基数,
   "status": {
     "code": 0,
     "text": "in progress"
@@ -97,7 +97,7 @@ PUT /sessions/:session_id/guess
 }
 ```
 `reply.A` は推測した数字の内、数値と桁の位置があっている数字の個数です。  
-`reply.B` は推測した数字農地、数値は存在するが桁が間違っている数字の数です。  
+`reply.B` は推測した数字の内、数値は存在するが桁が間違っている数字の数です。  
 
 正しい数字を推測した時は `reply.A` の値が `num_digits` と同じになります。
 また `status.code` が 1 になるのでそちらで判定可能です。
