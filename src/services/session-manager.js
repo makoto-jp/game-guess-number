@@ -61,7 +61,7 @@ class Session {
    * @param {Array<Number} digits 
    */
   guess(digits) {
-    if (!(digits instanceof Array)) {
+    if (!(digits instanceof Array) || digits.length !== this.#answer.length) {
       throw new BadRequest(`bad digits: ${digits}`);
     }
 
