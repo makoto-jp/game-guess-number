@@ -13,7 +13,6 @@ function createDigits(num_digits, radix) {
   for (let i = 0; i < radix; i++) {
     all_numbers.push(i);
   }
-  console.log(all_numbers);
 
   // shuffle numbers 3 times.
   for (let i = 0; i < 3; i++) {
@@ -62,7 +61,6 @@ class Session {
    * @param {Array<Number} digits 
    */
   guess(digits) {
-    console.log(`${digits} for ${this.#answer}`);
     if (!(digits instanceof Array)) {
       throw new BadRequest(`bad digits: ${digits}`);
     }
