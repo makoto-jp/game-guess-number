@@ -18,19 +18,19 @@ GET /games
 [
   {
     "id": "d1r10",
-    "name": "1桁10進数",
+    "name": "10進数1桁",
     "num_digits": 1,
     "radix": 10
   },
   {
     "id": "d4r10",
-    "name": "1桁10進数",
+    "name": "10進数4桁",
     "num_digits": 4,
     "radix": 10
   },
   {
     "id": "d4r16",
-    "name": "1桁10進数",
+    "name": "16進数4桁",
     "num_digits": 4,
     "radix": 16
   }
